@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="feat: core structure done, EmployeeHibernateRepo added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +73,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677858494306</updated>
-      <workItem from="1677858495626" duration="4345000" />
+      <workItem from="1677858495626" duration="5369000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: core structure done, EmployeeHibernateRepo added">
+      <created>1677863110729</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677863110729</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: core structure done, EmployeeHibernateRepo added" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: core structure done, EmployeeHibernateRepo added" />
   </component>
 </project>
