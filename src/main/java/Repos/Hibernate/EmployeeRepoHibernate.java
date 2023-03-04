@@ -1,7 +1,6 @@
 package Repos.Hibernate;
 
 import Entities.Employee;
-import Entities.Task;
 import Interfaces.Repository;
 import Service.HibernateUtil;
 import jakarta.persistence.EntityManager;
@@ -12,12 +11,12 @@ import org.hibernate.SessionFactory;
 
 import java.util.List;
 
-public class TaskRepo implements Repository<Task> {
+public class EmployeeRepoHibernate implements Repository<Employee> {
     private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Entities.Task");
+    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Entities.Employee");
 
     @Override
-    public Task save(Task entity) {
+    public Employee save(Employee entity) {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         session.persist(entity);
@@ -28,7 +27,7 @@ public class TaskRepo implements Repository<Task> {
     @Override
     public void deleteById(long id) {
         Session session = sessionFactory.getCurrentSession();
-        Task employee = session.getReference(Task.class, id);
+        Employee employee = session.getReference(Employee.class, id);
         if (employee != null) {
             session.remove(employee);
             session.flush();
@@ -36,7 +35,7 @@ public class TaskRepo implements Repository<Task> {
     }
 
     @Override
-    public void deleteByEntity(Task entity) {
+    public void deleteByEntity(Employee entity) {
         Session session = sessionFactory.getCurrentSession();
         session.remove(entity);
         session.flush();
@@ -47,11 +46,11 @@ public class TaskRepo implements Repository<Task> {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.createQuery("delete from Task").executeUpdate();
+        entityManager.createQuery("delete from Employee").executeUpdate();
     }
 
     @Override
-    public Task update(Task entity) {
+    public Employee update(Employee entity) {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         session.merge(entity);
@@ -60,14 +59,14 @@ public class TaskRepo implements Repository<Task> {
     }
 
     @Override
-    public Task getById(long id) {
+    public Employee getById(long id) {
         Session session = sessionFactory.getCurrentSession();
-        return session.get(Task.class, id);
+        return session.get(Employee.class, id);
     }
 
     @Override
-    public List<Task> getAll() {
+    public List<Employee> getAll() {
         Session session = sessionFactory.getCurrentSession();
-        return session.createQuery("SELECT a FROM Task a", Task.class).getResultList();
+        return session.createQuery("SELECT a FROM Employee a", Employee.class).getResultList();
     }
 }
