@@ -6,6 +6,7 @@ import Service.HibernateUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -13,13 +14,13 @@ import java.util.List;
 
 public class EmployeeRepoHibernate implements Repository<Employee> {
     private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Entities.Employee");
 
     @Override
     public Employee save(Employee entity) {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         session.persist(entity);
+        session.flush();
         session.getTransaction().commit();
         return entity;
     }
@@ -45,8 +46,8 @@ public class EmployeeRepoHibernate implements Repository<Employee> {
     public void deleteAll() {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.createQuery("delete from Employee").executeUpdate();
+        Query query = session.createQuery("delete from Employee");
+        query.executeUpdate();
     }
 
     @Override

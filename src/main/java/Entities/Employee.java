@@ -1,22 +1,23 @@
 package Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
+@Table(catalog = "employees_and_tasks", name = "employee")
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long employee_id;
+    @Column(name="employee_id")
+    private Long id = UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
     private String name;
+    @Column(name="date_of_birth")
     private Integer dateOfBirth;
     /*
         create table employees_and_tasks.employee

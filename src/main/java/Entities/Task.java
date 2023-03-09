@@ -6,15 +6,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
+@Table(schema = "employees_and_tasks", name = "task")
 public class Task {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long task_id;
+    @Column(name="task_id")
+    private Long id = UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
     private String name;
     private Date deadline;
     private String description;

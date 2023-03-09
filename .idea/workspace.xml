@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="feat: TaskRepo added">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/JDBCException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/BatisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +39,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,25 +58,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Labs/Lab2Sem4ProgREAL/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Labs/Lab2Sem4ProgREAL/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Labs\Lab2Sem4ProgREAL\src\main\resources" />
@@ -69,6 +84,17 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Service" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Start" />
+      <module name="Lab2Sem4ProgREAL.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,6 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677858494306</updated>
       <workItem from="1677858495626" duration="10804000" />
+      <workItem from="1677925542596" duration="8364000" />
+      <workItem from="1678353188426" duration="2441000" />
     </task>
     <task id="LOCAL-00001" summary="feat: core structure done, EmployeeHibernateRepo added">
       <created>1677863110729</created>
@@ -100,9 +128,46 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: core structure done, EmployeeHibernateRepo added" />
     <MESSAGE value="feat: TaskRepo added" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: TaskRepo added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Start.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Service/BatisUtil.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

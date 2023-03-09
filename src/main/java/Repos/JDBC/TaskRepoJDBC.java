@@ -1,6 +1,6 @@
 package Repos.JDBC;
 
-import Entities.Employee;
+import Entities.Task;
 import Exceptions.JDBCException;
 import Interfaces.Repository;
 import com.mysql.cj.jdbc.Driver;
@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeRepoJDBC implements Repository<Employee> {
+public class TaskRepoJDBC implements Repository<Task> {
     private static final String URL = "jdbc:mysql://localhost:3306/";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "HolyPreacher";
@@ -23,16 +23,21 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
         }
     }
 
-    public EmployeeRepoJDBC() throws SQLException {
+    public TaskRepoJDBC() throws SQLException {
     }
 
+
     @Override
-    public Employee save(Employee entity) throws JDBCException {
+    public Task save(Task entity) throws JDBCException {
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO employee (employee_id, name, date_of_birth)" + "VALUES (?,?,?)");
+            String sql = "INSERT INTO Task (Task_id, name, deadline, description, tasktype, employee_id)" + "VALUES (?,?,?,?,?,?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setLong(1, entity.getId());
             statement.setString(2, entity.getName());
-            statement.setInt(3, entity.getDateOfBirth());
+            statement.setDate(3, (Date) entity.getDeadline());
+            statement.setString(4, entity.getDescription());
+            statement.setString(5, entity.getTaskType());
+            statement.setLong(6, entity.getEmployee().getId());
             statement.execute();
             return entity;
         } catch (SQLException e) {
@@ -44,7 +49,7 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
     public void deleteById(long id) throws JDBCException {
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
             Statement statement = connection.createStatement();
-            String sql = "DELETE FROM employee WHERE employee_id = " + id;
+            String sql = "DELETE FROM Task WHERE Task_id = " + id;
             statement.execute(sql);
         } catch (SQLException e) {
             throw new JDBCException(e);
@@ -52,11 +57,11 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
     }
 
     @Override
-    public void deleteByEntity(Employee entity) throws JDBCException {
+    public void deleteByEntity(Task entity) throws JDBCException {
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
             Statement statement = connection.createStatement();
             Long id = entity.getId();
-            statement.execute("DELETE FROM employee WHERE employee_id = " + id);
+            statement.execute("DELETE FROM Task WHERE Task_id = " + id);
         } catch (SQLException e) {
             throw new JDBCException(e);
         }
@@ -66,15 +71,15 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
     public void deleteAll() throws JDBCException {
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
             Statement statement = connection.createStatement();
-            statement.execute("DELETE FROM employee");
+            statement.execute("DELETE FROM task");
         } catch (SQLException e) {
             throw new JDBCException(e);
         }
     }
 
     @Override
-    public Employee update(Employee entity) throws JDBCException {
-        try  {
+    public Task update(Task entity) throws JDBCException {
+        try {
             deleteByEntity(entity);
             save(entity);
             return entity;
@@ -84,16 +89,20 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
     }
 
     @Override
-    public Employee getById(long id) throws JDBCException {
+    public Task getById(long id) throws JDBCException {
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
-            PreparedStatement ps = connection.prepareStatement("select * from employee where employee_id = ?");
+            PreparedStatement ps = connection.prepareStatement("select * from Task where task_id = ?");
             ps.setLong(1, id);
             ResultSet rs = ps.executeQuery();
-            if(rs.next()){
-                Employee result = new Employee();
-                result.setId(rs.getLong("employee_id"));
+            EmployeeRepoJDBC employeeRepoJDBC = new EmployeeRepoJDBC();
+            if (rs.next()) {
+                Task result = new Task();
+                result.setId(rs.getLong("task_id"));
                 result.setName(rs.getString("name"));
-                result.setDateOfBirth(rs.getInt("date_of_birth"));
+                result.setDeadline(rs.getDate("deadline"));
+                result.setDescription(rs.getString("description"));
+                result.setTaskType(rs.getString("tasktype"));
+                result.setEmployee(employeeRepoJDBC.getById(rs.getLong("employee_id")));
                 return result;
             }
             throw new JDBCException(new NullPointerException("No entity found."));
@@ -103,16 +112,20 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
     }
 
     @Override
-    public List<Employee> getAll() throws JDBCException {
+    public List<Task> getAll() throws JDBCException {
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
-            PreparedStatement ps = connection.prepareStatement("select * from Employee");
+            PreparedStatement ps = connection.prepareStatement("select * from Task");
             ResultSet rs = ps.executeQuery();
-            ArrayList<Employee> result = new ArrayList<>();
-            if(rs.next()){
-                Employee current = new Employee();
-                current.setId(rs.getLong("employee_id"));
+            ArrayList<Task> result = new ArrayList<>();
+            EmployeeRepoJDBC employeeRepoJDBC = new EmployeeRepoJDBC();
+            if (rs.next()) {
+                Task current = new Task();
+                current.setId(rs.getLong("task_id"));
                 current.setName(rs.getString("name"));
-                current.setDateOfBirth(rs.getInt("date_of_birth"));
+                current.setDeadline(rs.getDate("deadline"));
+                current.setDescription(rs.getString("description"));
+                current.setTaskType(rs.getString("tasktype"));
+                current.setEmployee(employeeRepoJDBC.getById(rs.getLong("employee_id")));
                 result.add(current);
             }
             return result;

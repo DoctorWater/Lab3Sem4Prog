@@ -16,6 +16,7 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.32'
     compileOnly 'org.projectlombok:lombok:1.18.26'
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.mybatis:mybatis:3.5.12'
 }
 
 test {
