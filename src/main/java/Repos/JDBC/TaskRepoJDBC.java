@@ -1,6 +1,8 @@
 package Repos.JDBC;
 
 import Entities.Task;
+import Entities.TaskType;
+import Exceptions.FunctionNotSupportedException;
 import Exceptions.JDBCException;
 import Interfaces.Repository;
 import com.mysql.cj.jdbc.Driver;
@@ -36,7 +38,7 @@ public class TaskRepoJDBC implements Repository<Task> {
             statement.setString(2, entity.getName());
             statement.setDate(3, (Date) entity.getDeadline());
             statement.setString(4, entity.getDescription());
-            statement.setString(5, entity.getTaskType());
+            statement.setString(5, entity.getTaskType().toString());
             statement.setLong(6, entity.getEmployee().getId());
             statement.execute();
             return entity;
@@ -101,7 +103,7 @@ public class TaskRepoJDBC implements Repository<Task> {
                 result.setName(rs.getString("name"));
                 result.setDeadline(rs.getDate("deadline"));
                 result.setDescription(rs.getString("description"));
-                result.setTaskType(rs.getString("tasktype"));
+                result.setTaskType(TaskType.valueOf(rs.getString("tasktype")));
                 result.setEmployee(employeeRepoJDBC.getById(rs.getLong("employee_id")));
                 return result;
             }
@@ -124,7 +126,7 @@ public class TaskRepoJDBC implements Repository<Task> {
                 current.setName(rs.getString("name"));
                 current.setDeadline(rs.getDate("deadline"));
                 current.setDescription(rs.getString("description"));
-                current.setTaskType(rs.getString("tasktype"));
+                current.setTaskType(TaskType.valueOf(rs.getString("tasktype")));
                 current.setEmployee(employeeRepoJDBC.getById(rs.getLong("employee_id")));
                 result.add(current);
             }
@@ -132,5 +134,10 @@ public class TaskRepoJDBC implements Repository<Task> {
         } catch (SQLException e) {
             throw new JDBCException(e);
         }
+    }
+
+    @Override
+    public List<Task> getAllByVId(Long id) throws FunctionNotSupportedException {
+        return null;
     }
 }

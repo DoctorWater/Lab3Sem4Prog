@@ -1,6 +1,7 @@
 package Repos.JDBC;
 
 import Entities.Employee;
+import Exceptions.FunctionNotSupportedException;
 import Exceptions.JDBCException;
 import Interfaces.Repository;
 import com.mysql.cj.jdbc.Driver;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeRepoJDBC implements Repository<Employee> {
-    private static final String URL = "jdbc:mysql://localhost:3306/";
+    private static final String URL = "jdbc:mysql://localhost:3306/employees_and_tasks";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "HolyPreacher";
 
@@ -119,5 +120,10 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
         } catch (SQLException e) {
             throw new JDBCException(e);
         }
+    }
+
+    @Override
+    public List<Employee> getAllByVId(Long id) throws FunctionNotSupportedException {
+        throw new FunctionNotSupportedException();
     }
 }

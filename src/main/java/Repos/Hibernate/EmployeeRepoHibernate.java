@@ -1,6 +1,8 @@
 package Repos.Hibernate;
 
 import Entities.Employee;
+import Entities.Task;
+import Exceptions.FunctionNotSupportedException;
 import Interfaces.Repository;
 import Service.HibernateUtil;
 import jakarta.persistence.EntityManager;
@@ -69,5 +71,10 @@ public class EmployeeRepoHibernate implements Repository<Employee> {
     public List<Employee> getAll() {
         Session session = sessionFactory.getCurrentSession();
         return session.createQuery("SELECT a FROM Employee a", Employee.class).getResultList();
+    }
+
+    @Override
+    public List<Employee> getAllByVId(Long id) throws FunctionNotSupportedException {
+        throw new FunctionNotSupportedException();
     }
 }

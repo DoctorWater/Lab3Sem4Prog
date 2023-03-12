@@ -1,5 +1,6 @@
 package Repos.Hibernate;
 
+import Entities.Employee;
 import Entities.Task;
 import Interfaces.Repository;
 import Service.HibernateUtil;
@@ -68,5 +69,10 @@ public class TaskRepoHibernate implements Repository<Task> {
     public List<Task> getAll() {
         Session session = sessionFactory.getCurrentSession();
         return session.createQuery("SELECT a FROM Task a", Task.class).getResultList();
+    }
+
+    public List<Task> getAllByVId(Long id){
+        Session session = sessionFactory.getCurrentSession();
+        return session.createQuery("SELECT a FROM Task a where a.employee.id = id", Task.class).getResultList();
     }
 }

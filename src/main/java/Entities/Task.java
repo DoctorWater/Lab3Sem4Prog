@@ -20,8 +20,10 @@ public class Task {
     private String name;
     private Date deadline;
     private String description;
-    private String taskType;
+    @Enumerated(EnumType.STRING)
+    private TaskType taskType;
     @ManyToOne
+    @JoinColumn(name = "employee_id")
     private Employee employee;
 
     /*

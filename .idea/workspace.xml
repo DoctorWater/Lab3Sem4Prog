@@ -5,25 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="feat: TaskRepo added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/BatisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/TaskType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/FunctionNotSupportedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/TaskMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepoHibernate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/BatisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/BatisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +39,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,6 +108,11 @@
       <workItem from="1677858495626" duration="10804000" />
       <workItem from="1677925542596" duration="8364000" />
       <workItem from="1678353188426" duration="2441000" />
+      <workItem from="1678393357477" duration="2018000" />
+      <workItem from="1678467888491" duration="2635000" />
+      <workItem from="1678481046589" duration="944000" />
+      <workItem from="1678487524904" duration="4914000" />
+      <workItem from="1678575618822" duration="4123000" />
     </task>
     <task id="LOCAL-00001" summary="feat: core structure done, EmployeeHibernateRepo added">
       <created>1677863110729</created>
@@ -148,24 +154,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Start.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/Service/HibernateUtil.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Service/BatisUtil.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="6" />
+          <line>20</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

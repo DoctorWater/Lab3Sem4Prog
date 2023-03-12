@@ -1,5 +1,7 @@
 package Interfaces;
 
+import Entities.Task;
+import Exceptions.FunctionNotSupportedException;
 import Exceptions.JDBCException;
 
 import java.sql.SQLException;
@@ -13,4 +15,5 @@ public interface Repository<T> {
      T update(T entity) throws JDBCException;
      T getById(long id) throws JDBCException;
      List<T> getAll() throws JDBCException;
+     List<T> getAllByVId(Long id) throws FunctionNotSupportedException;
 }
