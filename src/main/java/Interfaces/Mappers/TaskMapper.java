@@ -46,4 +46,6 @@ public interface TaskMapper {
             "where task_id=#{id}",
             "</script>"})
     void updateTask(Task task);
+    @Select("SELECT * FROM task WHERE employee_id=#{id}")
+    List<Task> getEntitiesByVid(Long id);
 }

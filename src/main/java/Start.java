@@ -12,25 +12,16 @@ import Service.HibernateUtil;
 
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 
 public class Start {
-    public static void main(String[] args) {
-        Repository<Employee> employeeRepository = new EmployeeRepoBatis();
-        Repository<Task> taskRepository = new TaskRepoBatis();
-        Employee employee = new Employee();
-        employee.setName("Josh");
-        employee.setDateOfBirth(1238123);
-        Task task = new Task();
-        task.setDeadline(new Date());
-        task.setTaskType(TaskType.FUNCTIONALITY);
-        task.setDescription("No description.");
-        task.setName("Test task");
-        task.setEmployee(employee);
-        try {
-            employeeRepository.save(employee);
-            taskRepository.save(task);
-        } catch (JDBCException e) {
-            throw new RuntimeException(e);
+    private static Repository<Employee> employeeRepository = new EmployeeRepoBatis();
+    private static Repository<Task> taskRepository = new TaskRepoBatis();
+    public static void main(String[] args) throws JDBCException {
+        List<Employee> employees = employeeRepository.getAll();
+        for (Employee employee: employees) {
+            System.out.println(employee);
         }
+
     }
 }

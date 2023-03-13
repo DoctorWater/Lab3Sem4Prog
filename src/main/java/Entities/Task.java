@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
 import java.util.UUID;
 
 @Getter
 @Setter
+@ToString
 @Entity
 @NoArgsConstructor
 @Table(schema = "employees_and_tasks", name = "task")

@@ -89,6 +89,10 @@ public class TaskRepoBatis implements Repository<Task> {
 
     @Override
     public List<Task> getAllByVId(Long id) {
-        return null;
+        var session = sessionFactory.openSession();
+        TaskMapper mapper = session.getMapper(TaskMapper.class);
+        List<Task> result = mapper.getEntitiesByVid(id);
+        session.close();
+        return result;
     }
 }

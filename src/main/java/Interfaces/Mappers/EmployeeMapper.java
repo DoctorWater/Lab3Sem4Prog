@@ -15,6 +15,9 @@ public interface EmployeeMapper {
     Employee selectEmployeeById(Long id);
 
     @Select("SELECT * FROM employee")
+    @Results( value = {
+            @Result(property = "dateOfBirth", column = "date_of_birth")
+    })
     List<Employee> getAllEntities();
 
     @Delete("DELETE FROM employee WHERE employee_id = #{id}")
@@ -30,7 +33,7 @@ public interface EmployeeMapper {
             "update Employee",
             "  <set>",
             "    <if test='#{name} != null'>name=#{name},</if>",
-            "    <if test='dateOfBirth != null'>date_of_birth=#{dateOfBirth},</if>",
+            "    <if test='#{dateOfBirth} != null'>date_of_birth=#{dateOfBirth},</if>",
             "  </set>",
             "where employee_id=#{id}",
             "</script>"})

@@ -1,9 +1,11 @@
 package Repos.MyBatis;
 
 import Entities.Employee;
+import Entities.Task;
 import Exceptions.FunctionNotSupportedException;
 import Exceptions.JDBCException;
 import Interfaces.Mappers.EmployeeMapper;
+import Interfaces.Mappers.TaskMapper;
 import Interfaces.Repository;
 import Service.BatisUtil;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -79,7 +81,11 @@ public class EmployeeRepoBatis implements Repository<Employee> {
 
     @Override
     public List<Employee> getAll()  {
-        return null;
+        var session = sessionFactory.openSession();
+        EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+        List<Employee> result = mapper.getAllEntities();
+        session.close();
+        return result;
     }
 
     @Override
