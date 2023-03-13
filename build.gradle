@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.malkov'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.hibernate.orm:hibernate-core:6.1.7.Final'
+    implementation 'mysql:mysql-connector-java:8.0.32'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.mybatis:mybatis:3.5.12'
+}
+
+test {
+    useJUnitPlatform()
+}
