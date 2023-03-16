@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="feat: myBatis repos updated">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" afterDir="false" />
+    <list default="true" id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="feat: all done, waiting for execution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/TaskMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/TaskMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -49,25 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Labs/Lab2Sem4ProgREAL/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Labs/Lab2Sem4ProgREAL/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editing.templates",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Labs\Lab2Sem4ProgREAL\src\main\resources" />
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677873203553</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: all done, waiting for execution">
+      <created>1678701719309</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678701719309</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,21 +139,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: core structure done, EmployeeHibernateRepo added" />
     <MESSAGE value="feat: TaskRepo added" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: TaskRepo added" />
+    <MESSAGE value="feat: all done, waiting for execution" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: all done, waiting for execution" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java</url>
           <line>28</line>

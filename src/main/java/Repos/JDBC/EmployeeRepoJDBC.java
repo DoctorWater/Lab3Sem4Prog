@@ -33,7 +33,7 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
             PreparedStatement statement = connection.prepareStatement("INSERT INTO employee (employee_id, name, date_of_birth)" + "VALUES (?,?,?)");
             statement.setLong(1, entity.getId());
             statement.setString(2, entity.getName());
-            statement.setInt(3, entity.getDateOfBirth());
+            statement.setDate(3, (Date) entity.getDateOfBirth());
             statement.execute();
             return entity;
         } catch (SQLException e) {
@@ -94,7 +94,7 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
                 Employee result = new Employee();
                 result.setId(rs.getLong("employee_id"));
                 result.setName(rs.getString("name"));
-                result.setDateOfBirth(rs.getInt("date_of_birth"));
+                result.setDateOfBirth(rs.getDate("date_of_birth"));
                 return result;
             }
             throw new JDBCException(new NullPointerException("No entity found."));
@@ -113,7 +113,7 @@ public class EmployeeRepoJDBC implements Repository<Employee> {
                 Employee current = new Employee();
                 current.setId(rs.getLong("employee_id"));
                 current.setName(rs.getString("name"));
-                current.setDateOfBirth(rs.getInt("date_of_birth"));
+                current.setDateOfBirth(rs.getDate("date_of_birth"));
                 result.add(current);
             }
             return result;

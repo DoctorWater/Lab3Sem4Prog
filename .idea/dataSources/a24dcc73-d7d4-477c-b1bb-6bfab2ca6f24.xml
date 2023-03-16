@@ -1053,7 +1053,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>2</Position>
     </column>
     <column id="303" parent="299" name="date_of_birth">
-      <DataType>int|0s</DataType>
+      <DataType>date|0s</DataType>
       <Position>3</Position>
     </column>
     <index id="304" parent="299" name="PRIMARY">
