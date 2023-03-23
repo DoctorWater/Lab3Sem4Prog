@@ -1,16 +1,12 @@
 package Entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 import java.util.UUID;
 
-@Getter
-@Setter
+@Data
 @ToString
 @Entity
 @NoArgsConstructor

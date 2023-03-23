@@ -9,6 +9,7 @@ import Repos.JDBC.EmployeeRepoJDBC;
 import Repos.MyBatis.EmployeeRepoBatis;
 import Repos.MyBatis.TaskRepoBatis;
 import Service.HibernateUtil;
+import Service.JDBCUtil;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -17,11 +18,11 @@ import java.util.List;
 public class Start {
     private static Repository<Employee> employeeRepository = new EmployeeRepoBatis();
     private static Repository<Task> taskRepository = new TaskRepoBatis();
-    public static void main(String[] args) throws JDBCException {
+    public static void main(String[] args) throws JDBCException, SQLException {
         List<Employee> employees = employeeRepository.getAll();
         for (Employee employee: employees) {
             System.out.println(employee);
         }
-
+        JDBCUtil.closeConnection();
     }
 }

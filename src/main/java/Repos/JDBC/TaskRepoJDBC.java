@@ -5,6 +5,7 @@ import Entities.TaskType;
 import Exceptions.FunctionNotSupportedException;
 import Exceptions.JDBCException;
 import Interfaces.Repository;
+import Service.JDBCUtil;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -12,9 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskRepoJDBC implements Repository<Task> {
-    private static final String URL = "jdbc:mysql://localhost:3306/";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "HolyPreacher";
 
     static {
         try {
@@ -31,7 +29,7 @@ public class TaskRepoJDBC implements Repository<Task> {
 
     @Override
     public Task save(Task entity) throws JDBCException {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        try (Connection connection = JDBCUtil.getConnection()) {
             String sql = "INSERT INTO Task (Task_id, name, deadline, description, tasktype, employee_id)" + "VALUES (?,?,?,?,?,?)";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setLong(1, entity.getId());
@@ -49,7 +47,7 @@ public class TaskRepoJDBC implements Repository<Task> {
 
     @Override
     public void deleteById(long id) throws JDBCException {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        try (Connection connection = JDBCUtil.getConnection()) {
             Statement statement = connection.createStatement();
             String sql = "DELETE FROM Task WHERE Task_id = " + id;
             statement.execute(sql);
@@ -60,7 +58,7 @@ public class TaskRepoJDBC implements Repository<Task> {
 
     @Override
     public void deleteByEntity(Task entity) throws JDBCException {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        try (Connection connection = JDBCUtil.getConnection()) {
             Statement statement = connection.createStatement();
             Long id = entity.getId();
             statement.execute("DELETE FROM Task WHERE Task_id = " + id);
@@ -71,7 +69,7 @@ public class TaskRepoJDBC implements Repository<Task> {
 
     @Override
     public void deleteAll() throws JDBCException {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        try (Connection connection = JDBCUtil.getConnection()) {
             Statement statement = connection.createStatement();
             statement.execute("DELETE FROM task");
         } catch (SQLException e) {
@@ -92,7 +90,7 @@ public class TaskRepoJDBC implements Repository<Task> {
 
     @Override
     public Task getById(long id) throws JDBCException {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        try (Connection connection = JDBCUtil.getConnection()) {
             PreparedStatement ps = connection.prepareStatement("select * from Task where task_id = ?");
             ps.setLong(1, id);
             ResultSet rs = ps.executeQuery();
@@ -115,7 +113,7 @@ public class TaskRepoJDBC implements Repository<Task> {
 
     @Override
     public List<Task> getAll() throws JDBCException {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        try (Connection connection = JDBCUtil.getConnection()) {
             PreparedStatement ps = connection.prepareStatement("select * from Task");
             ResultSet rs = ps.executeQuery();
             ArrayList<Task> result = new ArrayList<>();
@@ -137,7 +135,26 @@ public class TaskRepoJDBC implements Repository<Task> {
     }
 
     @Override
-    public List<Task> getAllByVId(Long id) throws FunctionNotSupportedException {
-        return null;
+    public List<Task> getAllByVId(Long id) throws JDBCException {
+        try (Connection connection = JDBCUtil.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement("select * from task WHERE employee_id = ?");
+            ps.setLong(1, id);
+            ResultSet rs = ps.executeQuery();
+            ArrayList<Task> result = new ArrayList<>();
+            EmployeeRepoJDBC employeeRepoJDBC = new EmployeeRepoJDBC();
+            if (rs.next()) {
+                Task current = new Task();
+                current.setId(rs.getLong("task_id"));
+                current.setName(rs.getString("name"));
+                current.setDeadline(rs.getDate("deadline"));
+                current.setDescription(rs.getString("description"));
+                current.setTaskType(TaskType.valueOf(rs.getString("tasktype")));
+                current.setEmployee(employeeRepoJDBC.getById(rs.getLong("employee_id")));
+                result.add(current);
+            }
+            return result;
+        } catch (SQLException e) {
+            throw new JDBCException(e);
+        }
     }
 }

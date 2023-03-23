@@ -15,5 +15,5 @@ public interface Repository<T> {
      T update(T entity) throws JDBCException;
      T getById(long id) throws JDBCException;
      List<T> getAll() throws JDBCException;
-     List<T> getAllByVId(Long id) throws FunctionNotSupportedException;
+     List<T> getAllByVId(Long id) throws FunctionNotSupportedException, JDBCException;
 }

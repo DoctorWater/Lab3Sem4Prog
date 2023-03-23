@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="feat: all done, waiting for execution">
+    <list default="true" id="ed1ed3af-399d-47bd-bce1-5bcfd8dbdae1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/JDBCUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,19 +27,29 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package-info" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,8 +57,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2MVh7lhehzBpWNrd8zTxl0suCmJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2NQQixeS1vSlpTl23UcTB5jpjot" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -51,14 +68,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Labs/Lab2Sem4ProgREAL/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editing.templates",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -67,90 +84,19 @@
     ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Labs\Lab2Sem4ProgREAL\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Service" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Start" />
-      <module name="Lab2Sem4ProgREAL.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28cb3ac1-05f3-4034-bd06-21277b66efc3" name="Changes" comment="" />
-      <created>1677858494306</created>
+      <changelist id="ed1ed3af-399d-47bd-bce1-5bcfd8dbdae1" name="Changes" comment="" />
+      <created>1679593957496</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677858494306</updated>
-      <workItem from="1677858495626" duration="10804000" />
-      <workItem from="1677925542596" duration="8364000" />
-      <workItem from="1678353188426" duration="2441000" />
+      <updated>1679593957496</updated>
+      <workItem from="1679593959556" duration="2320000" />
     </task>
-    <task id="LOCAL-00001" summary="feat: core structure done, EmployeeHibernateRepo added">
-      <created>1677863110729</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1677863110729</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat: TaskRepo added">
-      <created>1677873203553</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1677873203553</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feat: all done, waiting for execution">
-      <created>1678701719309</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1678701719309</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: core structure done, EmployeeHibernateRepo added" />
-    <MESSAGE value="feat: TaskRepo added" />
-    <MESSAGE value="feat: all done, waiting for execution" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: all done, waiting for execution" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
