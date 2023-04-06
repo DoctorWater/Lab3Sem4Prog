@@ -4,54 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1ed3af-399d-47bd-bce1-5bcfd8dbdae1" name="Changes" comment="bugfix: JDBC findByVId changed, Lombok annotation changed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Annotations/EmployeeAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Annotations/TaskAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Controllers/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Controllers/ExceptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Controllers/TaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DTO/EmployeeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DTO/ExceptionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DTO/TaskDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Exceptions/NothingWasFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Repos/EmployeeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Repos/TaskRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Service/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Entities/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/TaskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Entities/TaskType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/FunctionNotSupportedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/JDBCException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/TaskMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepoHibernate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/BatisUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Service/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/JDBCUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="ed1ed3af-399d-47bd-bce1-5bcfd8dbdae1" name="Changes" comment="feat: controllers ready, swagger ready, prayers said" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,7 +203,7 @@
       <workItem from="1680541298655" duration="26000" />
       <workItem from="1680711585431" duration="5981000" />
       <workItem from="1680734135059" duration="6259000" />
-      <workItem from="1680814775876" duration="4998000" />
+      <workItem from="1680814775876" duration="5271000" />
     </task>
     <task id="LOCAL-00001" summary="bugfix: JDBC findByVId changed, Lombok annotation changed">
       <created>1679606817862</created>
@@ -259,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679606817862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: controllers ready, swagger ready, prayers said">
+      <created>1680823889916</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680823889916</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +227,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bugfix: JDBC findByVId changed, Lombok annotation changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix: JDBC findByVId changed, Lombok annotation changed" />
+    <MESSAGE value="feat: controllers ready, swagger ready, prayers said" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: controllers ready, swagger ready, prayers said" />
   </component>
 </project>
