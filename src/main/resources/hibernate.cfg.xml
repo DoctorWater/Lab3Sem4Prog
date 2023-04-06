@@ -16,7 +16,7 @@
         <property name="hibernate.generate_statistics">true</property>
         <property name="hibernate.use_sql_comments">true</property>
         <property name="hibernate.type.descriptor.sql.log">true</property>
-        <mapping class="Entities.Task"/>
-        <mapping class="Entities.Employee"/>
+        <mapping class="embrace.Entities.Employee"/>
+        <mapping class="embrace.Entities.Employee"/>
     </session-factory>
 </hibernate-configuration>

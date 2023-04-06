@@ -4,18 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1ed3af-399d-47bd-bce1-5bcfd8dbdae1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/JDBCUtil.java" afterDir="false" />
+    <list default="true" id="ed1ed3af-399d-47bd-bce1-5bcfd8dbdae1" name="Changes" comment="bugfix: JDBC findByVId changed, Lombok annotation changed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Annotations/EmployeeAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Annotations/TaskAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Controllers/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Controllers/ExceptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Controllers/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DTO/EmployeeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DTO/ExceptionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DTO/TaskDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Exceptions/NothingWasFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Repos/EmployeeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Repos/TaskRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/embrace/Service/TaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a24dcc73-d7d4-477c-b1bb-6bfab2ca6f24/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Entities/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Entities/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/TaskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Entities/TaskType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/FunctionNotSupportedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/JDBCException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/EmployeeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Mappers/TaskMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/EmployeeRepoHibernate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/Hibernate/TaskRepoHibernate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/EmployeeRepoJDBC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/JDBC/TaskRepoJDBC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/EmployeeRepoBatis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repos/MyBatis/TaskRepoBatis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/BatisUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/embrace/Service/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/JDBCUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +65,28 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Lab2Sem4ProgREAL" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Lab2Sem4ProgREAL" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Lab2Sem4ProgREAL" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -43,13 +97,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="lab-2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,26 +121,122 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Labs/DoctorWater/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e52e5a7cef99f7d24b5bd9db461dc5c8&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Labs\DoctorWater\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="DoctorWater [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DoctorWater [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Lab2Sem4ProgREAL.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="embrace.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Lab2Sem4ProgREAL.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="StartApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.DoctorWater [build]" />
+      <item itemvalue="Gradle.DoctorWater [buildDependents]" />
+      <item itemvalue="HTTP Request.generated-requests | #4" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Spring Boot.StartApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #4" />
+        <item itemvalue="Gradle.DoctorWater [buildDependents]" />
+        <item itemvalue="Gradle.DoctorWater [build]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -92,11 +245,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679593957496</updated>
-      <workItem from="1679593959556" duration="2320000" />
+      <workItem from="1679593959556" duration="3111000" />
+      <workItem from="1680115954363" duration="2789000" />
+      <workItem from="1680541298655" duration="26000" />
+      <workItem from="1680711585431" duration="5981000" />
+      <workItem from="1680734135059" duration="6259000" />
+      <workItem from="1680814775876" duration="4998000" />
     </task>
+    <task id="LOCAL-00001" summary="bugfix: JDBC findByVId changed, Lombok annotation changed">
+      <created>1679606817862</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679606817862</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bugfix: JDBC findByVId changed, Lombok annotation changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix: JDBC findByVId changed, Lombok annotation changed" />
   </component>
 </project>
