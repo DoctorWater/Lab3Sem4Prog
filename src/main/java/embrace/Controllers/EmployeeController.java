@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@EmployeeAnnotation
 @RequestMapping(value = "employee")
 public class EmployeeController{
     private final EmployeeService service;

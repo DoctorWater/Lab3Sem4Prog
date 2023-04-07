@@ -10,7 +10,6 @@ import java.util.UUID;
 
 @Data
 @Entity
-@ToString
 @NoArgsConstructor
 @Table(catalog = "employees_and_tasks", name = "employee")
 public class Employee {

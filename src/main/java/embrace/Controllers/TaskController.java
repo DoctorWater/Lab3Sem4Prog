@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@TaskAnnotation
 @RequestMapping(value = "task")
 public class TaskController {
     private final TaskService service;
