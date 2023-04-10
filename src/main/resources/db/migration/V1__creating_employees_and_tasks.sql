@@ -1,4 +1,4 @@
-create table if not exists employees_and_tasks.employee
+create table employees_and_tasks.employee
 (
     employee_id   bigint       not null,
     name          varchar(100) not null,
@@ -7,7 +7,7 @@ create table if not exists employees_and_tasks.employee
         primary key (employee_id)
 );
 
-create table if not exists employees_and_tasks.task
+create table employees_and_tasks.task
 (
     task_id     bigint       not null,
     name        varchar(100) not null,
