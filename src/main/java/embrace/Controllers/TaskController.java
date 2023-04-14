@@ -1,9 +1,6 @@
 package embrace.Controllers;
 
-import embrace.Annotations.TaskAnnotation;
-import embrace.DTO.EmployeeDTO;
 import embrace.DTO.TaskDTO;
-import embrace.Entities.Employee;
 import embrace.Entities.Task;
 import embrace.Entities.TaskType;
 import embrace.Exceptions.NothingWasFoundException;
@@ -11,7 +8,6 @@ import embrace.Service.EmployeeService;
 import embrace.Service.TaskService;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
