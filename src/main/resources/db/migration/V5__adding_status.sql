@@ -1,0 +1,1 @@
+ALTER TABLE employees_and_tasks.employee ADD status VARCHAR(100) DEFAULT 'USER' NOT NULL AFTER password;

@@ -1,5 +1,5 @@
 package embrace.Controllers;
-import embrace.Annotations.EmployeeAnnotation;
+
 import embrace.DTO.EmployeeDTO;
 import embrace.Entities.Employee;
 import embrace.Exceptions.NothingWasFoundException;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "employee")
-public class EmployeeController{
+public class EmployeeController {
     private final EmployeeService service;
 
     public EmployeeController(EmployeeService service) {
@@ -25,13 +25,13 @@ public class EmployeeController{
     }
 
     @GetMapping(value = "/name/{name}")
-    public List<Employee> getByName(@PathVariable String name){
+    public List<Employee> getByName(@PathVariable String name) {
         return service.getByName(name);
     }
 
     @PostMapping(value = "/save/one")
     public Employee saveOrUpdate(@RequestBody EmployeeDTO data) throws ParseException {
-        Employee newbie = new Employee(data.name(), data.dateOfBirth());
+        Employee newbie = new Employee(data.name(), data.password(), data.dateOfBirth());
         service.saveOrUpdate(newbie);
         return newbie;
     }
@@ -39,8 +39,8 @@ public class EmployeeController{
     @PostMapping(value = "/save/list")
     public List<Employee> saveOrUpdate(@RequestBody List<EmployeeDTO> data) throws ParseException {
         List<Employee> result = new ArrayList<>();
-        for(EmployeeDTO dto: data){
-            Employee newbie = new Employee(dto.name(), dto.dateOfBirth());
+        for (EmployeeDTO dto : data) {
+            Employee newbie = new Employee(dto.name(), dto.password(), dto.dateOfBirth());
             result.add(newbie);
         }
         service.saveOrUpdate(result);
@@ -48,13 +48,13 @@ public class EmployeeController{
     }
 
     @DeleteMapping(value = "/delete/one/{id}")
-    public String delete(@PathVariable Long id){
+    public String delete(@PathVariable Long id) {
         service.delete(id);
         return "Successfully deleted";
     }
 
     @DeleteMapping(value = "/delete/list")
-    public String delete(@RequestBody List<Long> ids){
+    public String delete(@RequestBody List<Long> ids) {
         service.delete(ids);
         return "Successfully deleted";
     }

@@ -12,10 +12,11 @@ import java.util.*;
 @Service
 public class EmployeeService {
     private final EmployeeRepo repository;
-    private BCryptPasswordEncoder passwordEncoder;
+    private final BCryptPasswordEncoder passwordEncoder;
 
     public EmployeeService(EmployeeRepo repository) {
         this.repository = repository;
+        this.passwordEncoder = new BCryptPasswordEncoder(12);
     }
 
     public Employee getById(Long id) throws NothingWasFoundException {
@@ -54,7 +55,7 @@ public class EmployeeService {
 
     private void assignDefaultRoles(Employee employee) {
         Set<Role> roles = new HashSet<>();
-        roles.add(Role.USER);
+        roles.add(new Role(Role.RoleEnum.USER));
         employee.setRoles(roles);
     }
 }

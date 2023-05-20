@@ -3,6 +3,8 @@ package embrace.Entities;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -22,26 +24,37 @@ public class Employee {
     private String name;
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
-    @ToString.Exclude
-    @ElementCollection(targetClass = Role.class)
-    @CollectionTable(name="employees_roles", joinColumns = @JoinColumn(name = "employee_id"))
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "employees_roles", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     @Column(name="role")
-    private Collection<Role> roles;
+    private Set<Role> roles;
     @Column(name="password")
     private String password;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
 
-    public Employee(String name, LocalDate dateOfBirth) {
+    public Employee(String name,String password, LocalDate dateOfBirth) {
         this.name = name;
+        this.password=password;
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Employee(String name, String dateOfBirth) throws ParseException {
+    public Employee(String name, String password, String dateOfBirth) {
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         this.name = name;
+        this.password=password;
         this.dateOfBirth = LocalDate.parse(dateOfBirth, dateFormat);
     }
 
+    public List<SimpleGrantedAuthority> takeAuthorities(){
+        List<SimpleGrantedAuthority> result = new ArrayList<>();
+        for (Role role:
+             roles) {
+            result.add(role.getAuthority());
+        }
+        return result;
+    }
 
     @Override
     public boolean equals(Object o) {
